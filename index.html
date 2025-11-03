@@ -21,18 +21,23 @@
                 </div>
 
                 <!-- Desktop Menu -->
+                 
                 <div class="hidden md:flex items-center space-x-8">
+                    
                     <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
                     <a href="#opportunities" class="text-gray-700 hover:text-blue-600 font-medium">Opportunities</a>
                     <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 font-medium">How It Works</a>
                     <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
                     
                     <!-- Language Selector -->
-                    <!-- <div class="flex items-center space-x-2">
+
+                     <div class="flex items-center space-x-2">
+
                         <button class="text-blue-600 font-semibold">EN</button>
                         <span class="text-gray-300">|</span>
                         <button class="text-gray-600 hover:text-blue-600">العربية</button>
-                    </div> -->
+
+                    </div> 
                     
                     <!-- Auth Buttons -->
                     <div class="flex items-center space-x-4">
@@ -47,7 +52,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button class="text-gray-700">
+                    <button class="text-gray-700"onclick="document.querySelector('nav div.md\\:flex').classList.toggle('hidden')">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
