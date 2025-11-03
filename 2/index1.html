@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فُرصتي - منصة التقديم الموحد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <span class="mr-3 text-2xl font-bold text-blue-600">فُرصتي</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">الرئيسية</a>
+                    <a href="#opportunities" class="text-gray-700 hover:text-blue-600 font-medium">الفرص</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 font-medium">كيف تعمل</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">عن المنصة</a>
+                    
+                    <!-- Language Selector -->
+                    <div class="flex items-center space-x-2 space-x-reverse">
+                        <button class="text-gray-600 hover:text-blue-600">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-blue-600 font-semibold">العربية</button>
+                    </div>
+                    
+                    <!-- Auth Buttons -->
+                    <div class="flex items-center space-x-4 space-x-reverse">
+                        <button class="text-blue-600 hover:text-blue-700 font-medium">تسجيل الدخول</button>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                            إنشاء حساب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-l from-blue-600 via-blue-700 to-purple-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    بوابتك إلى 
+                    <span class="text-yellow-300">الفرص</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    منصة موحدة تجمع كل المنح الدراسية، الوظائف، وفرص التمويل في مكان واحد. قدم طلباتك بسهولة وأمان.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 sm:space-x-reverse mb-12">
+                    <button class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg text-lg w-full sm:w-auto">
+                        <i class="fas fa-rocket mr-2"></i>
+                        ابدأ التقديم الآن
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all w-full sm:w-auto">
+                        <i class="fas fa-search mr-2"></i>
+                        استكشف الفرص
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">1,250+</div>
+                        <div class="text-blue-100">فرصة متاحة</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">5,000+</div>
+                        <div class="text-blue-100">طالب مستفيد</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-yellow-300 mb-2">150+</div>
+                        <div class="text-blue-100">منظمة شريكة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunities Preview -->
+    <section id="opportunities" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">أحدث الفرص المتاحة</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">اكتشف أحدث المنح الدراسية، الوظائف، وفرص التمويل</p>
+            </div>
+
+            <!-- Opportunity Type Tabs -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-gray-100 rounded-xl p-1 inline-flex">
+                    <button class="px-6 py-3 rounded-lg bg-blue-600 text-white font-medium transition-all">
+                        <i class="fas fa-graduation-cap mr-2"></i>المنح الدراسية
+                    </button>
+                    <button class="px-6 py-3 rounded-lg text-gray-700 hover:text-blue-600 font-medium transition-all">
+                        <i class="fas fa-briefcase mr-2"></i>الوظائف
+                    </button>
+                    <button class="px-6 py-3 rounded-lg text-gray-700 hover:text-blue-600 font-medium transition-all">
+                        <i class="fas fa-hand-holding-usd mr-2"></i>فرص التمويل
+                    </button>
+                </div>
+            </div>
+
+            <!-- Opportunities Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Opportunity Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden hover:transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full font-medium">
+                                <i class="fas fa-graduation-cap mr-1"></i>منحة دراسية
+                            </span>
+                            <span class="text-red-500 text-sm font-medium">
+                                <i class="fas fa-clock mr-1"></i>ينتهي بعد 5 أيام
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">منحة التميز الأكاديمي 2024</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">منحة كاملة للطلاب المتفوقين في جميع التخصصات الهندسية والطبية...</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-university text-blue-600 text-sm"></i>
+                                </div>
+                                <span class="mr-2 text-sm font-medium text-gray-700">جامعة القاهرة</span>
+                            </div>
+                            <span class="text-green-600 font-bold">ممولة بالكامل</span>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i>تقديم الطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Opportunity Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden hover:transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full font-medium">
+                                <i class="fas fa-briefcase mr-1"></i>وظيفة
+                            </span>
+                            <span class="text-gray-500 text-sm font-medium">
+                                <i class="fas fa-users mr-1"></i>25 متقدم
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">مطور ويب مبتدئ</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">فرصة عمل لمطوري الويب المبتدئين في شركة تقنية رائدة...</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-building text-purple-600 text-sm"></i>
+                                </div>
+                                <span class="mr-2 text-sm font-medium text-gray-700">شركة التقنية</span>
+                            </div>
+                            <span class="text-orange-600 font-bold">دوام كامل</span>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i>تقديم الطلب
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Opportunity Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden hover:transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full font-medium">
+                                <i class="fas fa-hand-holding-usd mr-1"></i>تمويل
+                            </span>
+                            <span class="text-green-500 text-sm font-medium">
+                                <i class="fas fa-check-circle mr-1"></i>مفتوح
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">دعم المشاريع الصغيرة</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">تمويل يصل إلى 50,000 ريال للمشاريع الصغيرة والمتوسطة...</p>
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-hands-helping text-green-600 text-sm"></i>
+                                </div>
+                                <span class="mr-2 text-sm font-medium text-gray-700">صندوق التنمية</span>
+                            </div>
+                            <span class="text-green-600 font-bold">50,000 ر.س</span>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i>تقديم الطلب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center">
+                <button class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-all font-semibold">
+                    <i class="fas fa-list mr-2"></i>عرض كل الفرص
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">كيف تعمل المنصة؟</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">4 خطوات بسيطة للحصول على فرصتك</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">إنشاء حساب</h3>
+                    <p class="text-gray-600">سجل في المنصة ببياناتك الشخصية وأنشئ ملفك التعريفي</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">اكتشاف الفرص</h3>
+                    <p class="text-gray-600">استعرض المنح الدراسية، الوظائف، وفرص التمويل المتاحة</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">تقديم الطلب</h3>
+                    <p class="text-gray-600">املأ نموذج التقديم وقم برفع المستندات المطلوبة</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div class="bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">متابعة الطلب</h3>
+                    <p class="text-gray-600">تابع حالة طلبك من خلال لوحة التحكم الشخصية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-l from-blue-600 to-purple-700 text-white">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">جاهز لبدء رحلتك؟</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                انضم إلى آلاف المستفيدين الذين وجدوا فرصهم المثالية من خلال منصتنا
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 sm:space-x-reverse">
+                <button class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg text-lg">
+                    <i class="fas fa-user-plus mr-2"></i>إنشاء حساب مجاني
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all">
+                    <i class="fas fa-play-circle mr-2"></i>شاهد فيديو التعريف
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <span class="mr-3 text-2xl font-bold">فُرصتي</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        منصة موحدة تجمع كل فرص المنح الدراسية، الوظائف، والتمويل في مكان واحد. نسعى لتمكين الشباب وربطهم بالفرص المناسبة.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الرئيسية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">المنح الدراسية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">الوظائف</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">فرص التمويل</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">تواصل معنا</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope ml-2"></i>
+                            info@fursati.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone ml-2"></i>
+                            +966 123 456 789
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt ml-2"></i>
+                            الرياض، المملكة العربية السعودية
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 فُرصتي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
