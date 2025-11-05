@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Fursati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gradient-to-b from-blue-600 to-blue-800 text-white shadow-lg fixed h-full lg:relative lg:translate-x-0 transform -translate-x-full transition-transform duration-300 z-40" id="sidebar">
+            <div class="p-5 text-center border-b border-white/10">
+                <h2 class="text-xl font-bold">Fursati</h2>
+                <p class="text-sm opacity-80 mt-1">Unified Application Platform</p>
+            </div>
+            <div class="py-4">
+                <div class="menu-item active" data-page="dashboard">
+                    <i class="fas fa-home w-6 text-center"></i>
+                    <span>Dashboard</span>
+                </div>
+               <a href="scholarships.html"> <div class="menu-item" data-page="scholarships">
+                    <i class="fas fa-user-graduate w-6 text-center"></i>
+                    <span>Scholarships</span>
+                </div>
+                </a>
+                <a href="job.html"><div class="menu-item" data-page="jobs">
+                    <i class="fas fa-briefcase w-6 text-center"></i>
+                    <span>Job Opportunities</span>
+                </div>
+                </a>
+                <a href="funding.html"><div class="menu-item" data-page="funding">
+                    <i class="fas fa-hand-holding-usd w-6 text-center"></i>
+                    <span>Support & Projects</span>
+                </div>
+                </a>
+               <a href="#"><div class="menu-item" data-page="applications">
+                    <i class="fas fa-file-alt w-6 text-center"></i>
+                    <span>My Applications</span>
+                </div>
+                </a> 
+                <a href="Settings.html"><div class="menu-item" data-page="settings">
+                    <i class="fas fa-cog w-6 text-center"></i>
+                    <span>Settings</span>
+                </div>
+                </a>
+               <a href="index.html"> <div class="menu-item" data-page="logout">
+                    <i class="fas fa-sign-out-alt w-6 text-center"></i>
+                    <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Overlay -->
+        <div class="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden hidden" id="overlay"></div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col lg:ml-0 transition-all duration-300">
+            <!-- Top Bar -->
+            <div class="bg-white p-4 flex justify-between items-center shadow-sm">
+                <div class="flex items-center">
+                    <button class="lg:hidden text-gray-600 mr-4" id="menuToggle">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <div class="flex items-center bg-gray-100 rounded-full px-4 py-2 w-80">
+                        <i class="fas fa-search text-gray-500"></i>
+                        <input type="text" placeholder="Search for opportunities..." class="bg-transparent border-0 focus:ring-0 w-full ml-2 focus:outline-none">
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="text-right hidden sm:block">
+                        <h4 class="font-semibold">Ahmed Mohamed</h4>
+                        <p class="text-sm text-gray-600">Student</p>
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=Ahmed+Mohamed&background=4361ee&color=fff" alt="User Avatar" class="w-10 h-10 rounded-full">
+                </div>
+            </div>
+            
+            <!-- Dashboard Content -->
+            <div class="p-6 flex-1">
+                <!-- Welcome Section -->
+                <div class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-6 rounded-xl shadow-md mb-6">
+                    <h1 class="text-2xl font-bold mb-2">Welcome back, Ahmed!</h1>
+                    <p>You have 3 applications under review and 5 new opportunities available</p>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-file-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">12</h3>
+                                <p class="text-gray-600 text-sm">Total Applications</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">5</h3>
+                                <p class="text-gray-600 text-sm">Accepted</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">3</h3>
+                                <p class="text-gray-600 text-sm">Under Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-bell text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">7</h3>
+                                <p class="text-gray-600 text-sm">Notifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Applications -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 mb-6">
+                    <div class="flex justify-between items-center border-b border-gray-200 pb-4 mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Recent Applications</h2>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition-colors text-sm">View All</a>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-full">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Opportunity</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Type</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Date</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Status</th>
+                                    <th class="py-3 px-4 text-left text-sm font-medium text-gray-700">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm">Cairo University Master's Scholarship</td>
+                                    <td class="py-3 px-4 text-sm">Scholarship</td>
+                                    <td class="py-3 px-4 text-sm">10/15/2023</td>
+                                    <td class="py-3 px-4">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Under Review</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <div class="flex space-x-2">
+                                            <button class="text-blue-600 hover:text-blue-800 transition-colors text-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="text-blue-600 hover:text-blue-800 transition-colors text-sm">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm">Web Developer at Tech Company</td>
+                                    <td class="py-3 px-4 text-sm">Job</td>
+                                    <td class="py-3 px-4 text-sm">10/10/2023</td>
+                                    <td class="py-3 px-4">
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Pending</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <div class="flex space-x-2">
+                                            <button class="text-blue-600 hover:text-blue-800 transition-colors text-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="text-blue-600 hover:text-blue-800 transition-colors text-sm">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm">Youth Small Projects Support</td>
+                                    <td class="py-3 px-4 text-sm">Funding</td>
+                                    <td class="py-3 px-4 text-sm">10/05/2023</td>
+                                    <td class="py-3 px-4">
+                                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Accepted</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <div class="flex space-x-2">
+                                            <button class="text-blue-600 hover:text-blue-800 transition-colors text-sm">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button class="text-blue-600 hover:text-blue-800 transition-colors text-sm">
+                                                <i class="fas fa-download"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <!-- Recommended Opportunities -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Recommended Opportunities</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
+                                <div>
+                                    <h4 class="font-medium text-gray-800">STEM Scholarship 2024</h4>
+                                    <p class="text-sm text-gray-600">Deadline: Dec 30, 2024</p>
+                                </div>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">
+                                    Apply
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Frontend Developer</h4>
+                                    <p class="text-sm text-gray-600">Remote • Full-time</p>
+                                </div>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition-colors">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Recent Notifications</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg">
+                                <i class="fas fa-info-circle text-blue-500 mt-1"></i>
+                                <div>
+                                    <p class="text-sm text-gray-800">Your scholarship application has been reviewed</p>
+                                    <p class="text-xs text-gray-600">2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 p-3 bg-green-50 rounded-lg">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-sm text-gray-800">Project funding approved</p>
+                                    <p class="text-xs text-gray-600">1 day ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Section -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+                    <div class="border-b border-gray-200 pb-4 mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Profile Information</h2>
+                    </div>
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-5" id="profileForm">
+                        <div>
+                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="fullName" value="Ahmed Mohamed Ahmed" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" value="ahmed@example.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="text" id="phone" value="+20123456789" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="country" class="block text-sm font-medium text-gray-700 mb-1">Country</label>
+                            <select id="country" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                                <option>Egypt</option>
+                                <option>Saudi Arabia</option>
+                                <option>UAE</option>
+                                <option>Jordan</option>
+                                <option>Rwanda</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="bio" class="block text-sm font-medium text-gray-700 mb-1">About Me</label>
+                            <textarea id="bio" rows="3" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">Third-year engineering student looking for scholarship opportunities to continue my studies abroad.</textarea>
+                        </div>
+                        <div class="md:col-span-2 flex space-x-3">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors font-medium flex items-center">
+                                <i class="fas fa-save mr-2"></i>
+                                Save Changes
+                            </button>
+                            <button type="button" class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg transition-colors font-medium">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .menu-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-right: 4px solid transparent;
+        }
+        
+        .menu-item:hover, .menu-item.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-right-color: white;
+        }
+        
+        .menu-item i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const menuToggle = document.getElementById('menuToggle');
+            const profileForm = document.getElementById('profileForm');
+
+            // Toggle mobile menu
+            menuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('-translate-x-full');
+                overlay.classList.toggle('hidden');
+            });
+
+            // Close menu when clicking overlay
+            overlay.addEventListener('click', function() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            });
+
+            // Menu item click handlers
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    document.querySelectorAll('.menu-item').forEach(i => {
+                        i.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Get page name
+                    const page = this.getAttribute('data-page');
+                    
+                    // Handle different pages (you can expand this)
+                    if (page === 'logout') {
+                        if (confirm('Are you sure you want to logout?')) {
+                            window.location.href = 'login.html';
+                        }
+                        return;
+                    }
+                    
+                    // Close mobile menu after selection
+                    if (window.innerWidth < 1024) {
+                        sidebar.classList.add('-translate-x-full');
+                        overlay.classList.add('hidden');
+                    }
+                    
+                    // Show alert for other pages (replace with actual page loading)
+                    if (page !== 'dashboard') {
+                        alert(`Loading ${page.replace(/-/g, ' ')} page...`);
+                    }
+                });
+            });
+
+            // Profile form submission
+            if (profileForm) {
+                profileForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+                    
+                    // Show loading state
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Saving...';
+                    submitButton.disabled = true;
+                    
+                    // Simulate API call
+                    setTimeout(() => {
+                        // Show success message
+                        submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Saved!';
+                        submitButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                        submitButton.classList.add('bg-green-600', 'hover:bg-green-700');
+                        
+                        // Reset after 2 seconds
+                        setTimeout(() => {
+                            submitButton.innerHTML = originalText;
+                            submitButton.disabled = false;
+                            submitButton.classList.remove('bg-green-600', 'hover:bg-green-700');
+                            submitButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                        }, 2000);
+                    }, 1500);
+                });
+            }
+
+            // Apply button functionality
+            document.querySelectorAll('button:contains("Apply")').forEach(button => {
+                button.addEventListener('click', function() {
+                    const opportunity = this.closest('.flex.items-center.justify-between').querySelector('h4').textContent;
+                    alert(`Applying for: ${opportunity}`);
+                });
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 1024) {
+                    sidebar.classList.remove('-translate-x-full');
+                    overlay.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
